@@ -6,5 +6,11 @@
 
 .pageinfo-icons {
     display: flex;
-    gap: 100px;
+    gap: 40px;
+}
+
+@media  screen and (min-width: 992px) {
+    .pageinfo-icons {
+        gap: 100px;
+    }
 }
