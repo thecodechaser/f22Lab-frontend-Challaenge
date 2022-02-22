@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import {
   ChevronLeftIcon,
   FilterIcon,
@@ -6,6 +6,7 @@ import {
   PhoneIcon,
   SearchIcon,
 } from "@heroicons/react/solid";
+import { object } from "yup";
 
 const directory = {
   A: [
@@ -213,6 +214,15 @@ const directory = {
 };
 
 const MiddleBar = () => {
+  const [searchText, setSearchText] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+  const handleClick=()=>{
+    setSearchValue(searchText)
+  }
+  let foundValues=0;
+  const updateFoundValues=()=>{
+    foundValues++;
+  }
   return (
     <aside className="hidden xl:order-first xl:flex xl:flex-col flex-shrink-0 w-96 border-r border-gray-200">
       <div className="px-6 pt-6 pb-4">
@@ -238,12 +248,14 @@ const MiddleBar = () => {
                 id="search"
                 className="focus:ring-pink-500 focus:border-pink-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                 placeholder="Search"
+                value={searchText} onChange={(e) => setSearchText(e.target.value)}
               />
             </div>
           </div>
           <button
             type="button"
             className="inline-flex justify-center px-3.5 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+          onClick={handleClick}
           >
             <FilterIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             <span className="sr-only">Search</span>
@@ -262,7 +274,8 @@ const MiddleBar = () => {
         1. It should be a name search
         2. When user types in a input value & clicks on filter icon, the list should have only people matching the search term
         3. There should be a UI developed for NOT FOUND use case also
-
+        
+        Done
        */}
       <nav className="flex-1 min-h-0 overflow-y-auto" aria-label="Directory">
         {Object.keys(directory).map((letter) => (
@@ -271,8 +284,9 @@ const MiddleBar = () => {
               <h3>{letter}</h3>
             </div>
             <ul className="relative z-0 divide-y divide-gray-200">
-              {directory[letter].map((person) => (
+              {directory[letter].filter(person => person.name.toLowerCase().includes(searchValue.toLowerCase())).map((person) => (
                 <li key={person.id}>
+                  {updateFoundValues()}
                   <div className="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-pink-500">
                     <div className="flex-shrink-0">
                       <img
@@ -296,8 +310,14 @@ const MiddleBar = () => {
                 </li>
               ))}
             </ul>
+           
           </div>
         ))}
+         {
+          foundValues===0 && (
+            <h2 class="not-found">Not Found! Please update your search</h2>
+          )
+        }
       </nav>
     </aside>
   );
