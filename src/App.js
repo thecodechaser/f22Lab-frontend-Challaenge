@@ -1,10 +1,27 @@
+import { Routes, Route } from 'react-router-dom';
 import React from "react";
 import LandingPage from "./pages/LandingPage";
+import Signup from './pages/Signup';
+import Home from './pages/Home';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
     <div>
-      <LandingPage />
+      <Routes>
+        <Route 
+        path="/"
+        element={(<LandingPage />)}
+        />
+        <Route 
+        path="/signup"
+        element={(<Signup />)}
+        />
+        <Route 
+        path="/home"
+        element={(<Home />)}
+        />
+      
       {/*  
 
         # TASK
@@ -17,6 +34,7 @@ const App = () => {
           3. /home route will render Home component (pages/Home)
 
       */}
+      </Routes>
     </div>
   );
 };
