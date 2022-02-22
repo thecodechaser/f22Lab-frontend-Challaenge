@@ -12,7 +12,6 @@
 .not-found {
     font-size: 20px;
     background-color: red;
-    /* width: 100px; */
 }
 
 @media  screen and (min-width: 992px) {

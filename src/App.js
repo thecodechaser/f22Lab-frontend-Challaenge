@@ -21,7 +21,7 @@ function App() {
         path="/home"
         element={(<Home />)}
         />
-      
+      </Routes>
       {/*  
 
         # TASK
@@ -33,8 +33,9 @@ function App() {
           2. /signup route will render Signup component (pages/Signup)
           3. /home route will render Home component (pages/Home)
 
+          Done
+
       */}
-      </Routes>
     </div>
   );
 };
