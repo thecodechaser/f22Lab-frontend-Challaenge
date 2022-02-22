@@ -25,7 +25,7 @@ const Signup = () => {
               </div>
 
               {/* //Signup  */}
-              <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+              <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6 signup-box">
                 <SignUpBox />
               </div>
             </div>

@@ -3,3 +3,8 @@
 .f22lab-logo {
     height: 500px;
 }
+
+.pageinfo-icons {
+    display: flex;
+    gap: 100px;
+}
