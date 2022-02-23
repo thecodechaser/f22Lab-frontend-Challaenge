@@ -1,47 +1,108 @@
-# F22Labs Frontend Challenge
-## Welcome! 👋
+![](https://img.shields.io/badge/thecodechaser-blueviolet)
 
-The challenge is for a total of 30 points. There are 8 tasks in total & each task has certain points attached to them(6 being the highest individual point for a task). Have a look through the entire codebase to understand each requirement & complete them.
+# F22Lab Front-end Challenge
 
-Libraries/Packages used in the project: 
+> F22Lab Front-end Challenge is a project from F22Lab to achieve the given tasks .
 
-1. Tailwind CSS (You can write your own CSS in `App.css` if you  dont have any prior experience with Tailwind)
-2. React Routers
-3. Formik & Yup
-4. Axios
+## Screenshots:
 
-These are the packages that are already available when you do `yarn install`. It is not compulsory that you have to work with these libraries alone. Feel free to add packages that you are comfortable with to complete the tasks. 
-## Working on the Solution
+### Landing Page
 
-- Clone the repo in your local machine & search for `# TASK`  keyword to start the challenge.
+![screenshot](./src/asset/LandingPage.png)
 
-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). In the project directory, you can run:
+### Singup Page
 
-### `yarn install`
+![screenshot](./src/asset/SingupPage.png)
 
-- Installs all dependencies that are needed to run the project.
-### `yarn start`
+### Home Page
 
-- Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![screenshot](./src/asset/HomePage.png)
 
-- The page will reload if you make edits. You will also see any lint errors in the console.
-## Few major things to consider
+## Built With
 
-- App layout is mobile responsive by default. Once the tasks are completed it should still be `mobile responsive`. 
-- We have attached few screenshots of the working app for your reference under `working_version` folder. There is also a video which can be accessed [here](https://www.loom.com/share/3286489fc6c849bea711056770526e6d). You can refer to them if you have any doubts on how the UI should look. 
-## Deploying your project
+- HTML
+- CSS
+- Tailwind
+- JavaScript
+- REACT
+- Craco
+- Jest
 
-- Clone this repo in your local machine.
-- Work on the tasks within the stipulated time mentioned.
-- Create your own `private repo`.
-- Do modular commits ie. push the changes you do as a commit for every task you complete.
-- Connect your repo with netlify and deploy the codebase.
-- We recommend using [Netlify](https://www.netlify.com/) as it's an amazing service and extremely simple to get set up with. Here is a step by step guide to deploy this app via netlify, [blog](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/).
+## Online live link
 
-## Sharing your solution
+[Visit project online](https://f22-challenge-thecodechaser.netlify.app)
 
-1. Add `subbiahf22` as a collaborator in your repo.
-2. Send us the URL of the deployed app once the task is completed.
-3. Ensure that your repo is `private` & do not expose it as public at any cost.
+## Getting Started
 
-**Have fun building!** 🚀
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+- A text editor(preferably Visual Studio Code)
+- Node
+- Web browser
+
+### Install
+- [Git](https://git-scm.com/downloads)
+- [Node](https://nodejs.org/en/download/)
+
+### Using it Locally
+
+- Clone the project
+
+```bash 
+git clone https://github.com/thecodechaser/f22Lab-frontend-Challaenge
+
+cd f22Lab-frontend-Challaenge
+```
+
+- Install dependencies
+
+```bash
+npm i 
+or
+npm install
+```
+- To Start the development server
+```bash
+npm start
+```
+
+
+## Visit And Open Files
+
+[Visit Repo](https://github.com/thecodechaser/f22Lab-frontend-Challaenge)
+
+## Download Repo
+
+[Download Repo](https://github.com/thecodechaser/f22Lab-frontend-Challaenge/archive/refs/heads/main.zip)
+
+## Authors
+
+👤 **F22Lab**
+
+- Website [F22Lab](https://www.f22labs.com)
+
+👤 **Ranjeet Singh**
+
+- GitHub: [@githubhandle](https://github.com/thecodechaser)
+- Twitter: [@twitterhandle](https://twitter.com/thecodechaser)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/thecodechaser)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/thecodechaser/f22Lab-frontend-Challaenge/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Inspiration: F22Lab 
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

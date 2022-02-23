@@ -7,6 +7,8 @@
 
 import React, { useEffect, useState } from "react";
 import { MailIcon, PhoneIcon } from "@heroicons/react/solid";
+import {ricardoCooper} from '../helpers/endPoints';
+import axios from "axios";
 
 const tabs = [
   { name: "Profile", href: "#", current: true },
@@ -17,6 +19,19 @@ const tabs = [
 const MainContent = () => {
   const [profile, setProfile] = useState("");
   const [team, setTeam] = useState([]);
+  const fetchTeam = async () =>{
+    const returnData = await axios.get(ricardoCooper.teamList);
+   setTeam(returnData.data)
+  }
+  const fetchProfile = async () =>{
+    const returnData = await axios.get(ricardoCooper.userProfile);
+   setProfile(returnData.data)
+  }
+
+  useEffect(()=>{
+    fetchTeam();
+    fetchProfile();
+  }, [])
   {
     /* 
     
@@ -31,6 +46,7 @@ const MainContent = () => {
       d. Make use of only one member API to build the UI.
       e. There will be multiple APIs available for user profile & team lists. Each API returns different set of responses, UI should be adaptable for all API responses.
     
+      Done
     */
   }
 
@@ -105,12 +121,13 @@ const MainContent = () => {
 
                 Show current tab bottom border & text in pink color rgb(236, 72, 153)
                 
+                Done
               */}
               {tabs.map((tab) => (
                 <a
                   key={tab.name}
                   href={tab.href}
-                  className="border-transparent text-gray-500 py-4 px-1 hover:text-gray-700 hover:border-gray-300"
+                className={`border-transparent text-gray-500 py-4 px-1 hover:text-gray-700 hover:border-gray-300 ${tab.current ? 'current-tab' : ''}`}
                   aria-current={tab.current ? "page" : undefined}
                 >
                   {tab.name}
@@ -124,6 +141,17 @@ const MainContent = () => {
       {/* Description list */}
       <div className="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+          {
+            profile.fields != undefined && (
+            Object.keys(profile.fields).map((field) => (
+              <div key={profile.fields[field]}>
+              <p>{field}</p>
+              <p className="p-details">{profile.fields[field]}</p>
+              </div>
+            ))
+            )
+          }
+
           {/* 
             
             # TASK
@@ -135,10 +163,11 @@ const MainContent = () => {
             c. UI should be exactly same from what has been shared in working_version folder.
             d. console.log(profile.fields) to see the list of key value pairs available for the user.
 
+            Done
           */}
           <div className="sm:col-span-2">
             <dt className="text-sm font-medium text-gray-500">About</dt>
-            {profile.about}
+           <p className="p-details">{profile.about}</p>
           </div>
         </dl>
       </div>
@@ -155,11 +184,13 @@ const MainContent = () => {
           Replicate the UI for team members list as shown in screenshots
           UI should be adaptable across different endpoints
 
+          Done
          */}
-        <div className="">
+        <div className="member-list">
           {team.map((person) => (
-            <div key={person.handle} className="">
-              <div className="">
+            <div key={person.name} className="member-main">
+              <img alt="member image" src={person.imageUrl} className="member-img"/>
+              <div className="member-info">
                 <p className="text-sm font-medium text-gray-900">
                   {person.name}
                 </p>

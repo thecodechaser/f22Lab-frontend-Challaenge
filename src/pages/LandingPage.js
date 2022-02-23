@@ -1,11 +1,11 @@
 import React from "react";
 import F22Logo from "../assets/F22labsLogo.png";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const OnClickHandler = () => {
-    history.push("/signup");
+    navigate.push("/signup");
   };
   return (
     <div
@@ -13,7 +13,7 @@ const LandingPage = () => {
       onClick={OnClickHandler}
     >
       <img
-        className="xl:h-5/6 2xl:h-auto cursor-pointer"
+        className="xl:h-5/6 2xl:h-auto cursor-pointer f22lab-logo"
         src={F22Logo}
         alt="f22labs icon"
       />

@@ -1,1 +1,71 @@
 /* Make use of this file to write your own custom CSS */
+
+.f22lab-logo {
+    height: 500px;
+}
+
+.pageinfo-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.not-found {
+    font-size: 14px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.member-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.member-main {
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-img {
+    width: 50px;
+    border-radius: 30px;
+}
+
+.current-tab {
+    border-bottom: 3px solid rgb(236, 72, 153)
+}
+
+.p-details{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-error {
+    font-size: 15px;
+    color: red;
+}
+
+@media  screen and (min-width: 992px) {
+    .pageinfo-icons {
+        gap: 100px;
+    }
+
+    .member-list {
+        flex-direction: row;
+    }
+
+    .member-main {
+        width: 45%;
+    }
+
+}

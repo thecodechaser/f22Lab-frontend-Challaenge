@@ -40,8 +40,10 @@ const PageInfo = () => {
         
           1. Align all the icons horizontally as shown in screenshots
 
+          Done 
+
          */}
-        <div className="">
+        <div className="pageinfo-icons">
           <div className="">
             <img
               className="h-9 sm:h-10"
