@@ -8,15 +8,15 @@
 
 ### Landing Page
 
-![screenshot](./src/asset/LandingPage.png)
+![screenshot](./src/assets/LandingPage.png)
 
 ### Singup Page
 
-![screenshot](./src/asset/SingupPage.png)
+![screenshot](./src/assets/SingupPage.png)
 
 ### Home Page
 
-![screenshot](./src/asset/HomePage.png)
+![screenshot](./src/assets/HomePage.png)
 
 ## Built With
 
