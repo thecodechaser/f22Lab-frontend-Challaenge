@@ -7,6 +7,8 @@
 
 import React, { useEffect, useState } from "react";
 import { MailIcon, PhoneIcon } from "@heroicons/react/solid";
+import {ricardoCooper} from '../helpers/endPoints';
+import axios from "axios";
 
 const tabs = [
   { name: "Profile", href: "#", current: true },
@@ -17,6 +19,14 @@ const tabs = [
 const MainContent = () => {
   const [profile, setProfile] = useState("");
   const [team, setTeam] = useState([]);
+  const fetchTeamMemebrs = async () =>{
+    const returnData = await axios.get(ricardoCooper.teamList);
+   setTeam(returnData.data)
+  }
+
+  useEffect(()=>{
+    fetchTeamMemebrs();
+  }, [])
   {
     /* 
     
@@ -105,12 +115,13 @@ const MainContent = () => {
 
                 Show current tab bottom border & text in pink color rgb(236, 72, 153)
                 
+                
               */}
               {tabs.map((tab) => (
                 <a
                   key={tab.name}
                   href={tab.href}
-                  className="border-transparent text-gray-500 py-4 px-1 hover:text-gray-700 hover:border-gray-300"
+                className={`border-transparent text-gray-500 py-4 px-1 hover:text-gray-700 hover:border-gray-300 ${tab.current ? 'current-tab' : ''}`}
                   aria-current={tab.current ? "page" : undefined}
                 >
                   {tab.name}
@@ -155,11 +166,13 @@ const MainContent = () => {
           Replicate the UI for team members list as shown in screenshots
           UI should be adaptable across different endpoints
 
+          Done
          */}
-        <div className="">
+        <div className="member-list">
           {team.map((person) => (
-            <div key={person.handle} className="">
-              <div className="">
+            <div key={person.name} className="member-main">
+              <img alt="member image" src={person.imageUrl} className="member-img"/>
+              <div className="member-info">
                 <p className="text-sm font-medium text-gray-900">
                   {person.name}
                 </p>
