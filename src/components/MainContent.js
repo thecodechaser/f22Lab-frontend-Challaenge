@@ -144,7 +144,7 @@ const MainContent = () => {
           {
             profile.fields != undefined && (
             Object.keys(profile.fields).map((field) => (
-              <div >
+              <div key={profile.fields[field]}>
               <p>{field}</p>
               <p className="p-details">{profile.fields[field]}</p>
               </div>

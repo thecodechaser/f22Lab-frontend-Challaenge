@@ -49,6 +49,11 @@
     font-size: 15px;
 }
 
+.form-error {
+    font-size: 15px;
+    color: red;
+}
+
 @media  screen and (min-width: 992px) {
     .pageinfo-icons {
         gap: 100px;
