@@ -44,6 +44,11 @@
     border-bottom: 3px solid rgb(236, 72, 153)
 }
 
+.p-details{
+    font-weight: 500;
+    font-size: 15px;
+}
+
 @media  screen and (min-width: 992px) {
     .pageinfo-icons {
         gap: 100px;
