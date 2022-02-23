@@ -10,8 +10,9 @@
 }
 
 .not-found {
-    font-size: 20px;
-    background-color: red;
+    font-size: 14px;
+    margin-left: 25px;
+    margin-top: 25px;
 }
 
 .member-list {

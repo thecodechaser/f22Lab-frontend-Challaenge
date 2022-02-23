@@ -27,7 +27,7 @@ const FormComponent = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [render, setRender] = useState('Update');
-  const [validation, setValidtion] = useState([{validate: true}, {validate: true}, {validate: true}])
+  const [validation, setValidtion] = useState([{validate: true}, {validate: true}, {validate: true}]);
 
   const navigateHome=()=> {
     if(validation[0].validate && validation[1].validate && validation[2].validate){
