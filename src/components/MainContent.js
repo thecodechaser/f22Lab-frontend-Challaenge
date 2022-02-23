@@ -115,7 +115,7 @@ const MainContent = () => {
 
                 Show current tab bottom border & text in pink color rgb(236, 72, 153)
                 
-                
+                Done
               */}
               {tabs.map((tab) => (
                 <a
