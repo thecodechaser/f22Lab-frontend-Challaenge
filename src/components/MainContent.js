@@ -7,7 +7,7 @@
 
 import React, { useEffect, useState } from "react";
 import { MailIcon, PhoneIcon } from "@heroicons/react/solid";
-import {ricardoCooper} from '../helpers/endPoints';
+import {timothéeNaël} from '../helpers/endPoints';
 import axios from "axios";
 
 const tabs = [
@@ -20,11 +20,11 @@ const MainContent = () => {
   const [profile, setProfile] = useState("");
   const [team, setTeam] = useState([]);
   const fetchTeam = async () =>{
-    const returnData = await axios.get(ricardoCooper.teamList);
+    const returnData = await axios.get(timothéeNaël.teamList);
    setTeam(returnData.data)
   }
   const fetchProfile = async () =>{
-    const returnData = await axios.get(ricardoCooper.userProfile);
+    const returnData = await axios.get(timothéeNaël.userProfile);
    setProfile(returnData.data)
   }
 

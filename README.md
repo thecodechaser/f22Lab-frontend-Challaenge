@@ -18,6 +18,10 @@
 
 ![screenshot](./src/assets/HomePage.png)
 
+### Settings Page
+
+![screenshot](./src/assets/SettingsPage.png)
+
 ## Built With
 
 - HTML

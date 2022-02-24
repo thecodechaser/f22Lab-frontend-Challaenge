@@ -55,6 +55,58 @@
     color: red;
 }
 
+.settings-title {
+    margin-top: 50px;
+    margin-left: 95px;
+}
+
+.settings-profile-c {
+    margin: 30px 50px 0 95px;
+}
+
+.settings-account-c {
+    margin: 30px 50px 0 95px;
+}
+
+.settings-h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.settings-p {
+    font-size: 16px;
+    color: grey;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-item3,
+.profile-item3 {
+    color: rgb(139,92,246);
+    font-weight: 500;
+}
+
+.a-item2 {
+    margin-right: 75px;
+}
+
+.p-item2 {
+    margin-right: 40px;
+}
+
+.profile-item1,
+.account-item1 {
+    color: grey;
+}
+
+.profile-item2,
+.account-item2 {
+    font-weight: 500;
+}
+
 @media  screen and (min-width: 992px) {
     .pageinfo-icons {
         gap: 100px;

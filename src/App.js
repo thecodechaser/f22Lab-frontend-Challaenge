@@ -3,6 +3,7 @@ import React from "react";
 import LandingPage from "./pages/LandingPage";
 import Signup from './pages/Signup';
 import Home from './pages/Home';
+import Settings from './pages/Settings';
 import './App.css';
 
 function App() {
@@ -21,7 +22,12 @@ function App() {
         path="/home"
         element={(<Home />)}
         />
+         <Route 
+      path="/settings"
+      element={(<Settings />)}
+      ></Route>
       </Routes>
+     
       {/*  
 
         # TASK

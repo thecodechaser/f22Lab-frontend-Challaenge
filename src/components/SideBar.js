@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import {useNavigate } from "react-router";
 
 import {
   CalendarIcon,
@@ -35,6 +36,7 @@ function classNames(...classes) {
 }
 
 const SideBar = () => {
+  const navigate= useNavigate();
   return (
     <div className="flex flex-col w-64">
       {/* Sidebar component, swap this element with another sidebar if you like */}
@@ -81,8 +83,9 @@ const SideBar = () => {
               {secondaryNavigation.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
+                  href={item.name == "Settings" ? "": (item.href)}
                   className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                 onClick={()=> item.name == "Settings" && ( navigate('/settings'))}
                 >
                   <item.icon
                     className="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
