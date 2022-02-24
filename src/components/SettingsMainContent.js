@@ -1,29 +1,29 @@
-
 import React from "react";
 
-const Settings =() =>{
-    const settingsTabs = [
-        {name: "General"},
-        {name: "Password"},
-        {name: "Notifications"},
-        {name: "Plan"},
-        {name: "Billings"},
-        {name: "Team Members"}
-    ]
+const settingsTabs = [
+    {name: "General"},
+    {name: "Password"},
+    {name: "Notifications"},
+    {name: "Plan"},
+    {name: "Billings"},
+    {name: "Team Members"}
+]
 
-    const profileDetails=[
-        {first: "name", second: "Chelesia Hagon", third: "Update"},
-        {first: "Photo", second: "imageUrl", third: "Update | Remove"},
-        {first: "Email", second: "email@email.com", third: "Update"},
-        {first: "Job Title", second: "Human Resource Manager", third: "Update"}
-    ]
+const profileDetails=[
+    {first: "name", second: "Chelesia Hagon", third: "Update"},
+    {first: "Photo", second: "imageUrl", third: "Update | Remove"},
+    {first: "Email", second: "email@email.com", third: "Update"},
+    {first: "Job Title", second: "Human Resource Manager", third: "Update"}
+]
 
-    const accountDetails = [
-        {first: "Language", second: "English", third: "Update"},
-        {first: "Date-Formate", second: "DD-MM-YY", third: "Update | Remove"},
-        {first: "Automatic Timezone", second: "", third: "icon"},
-    ]
-    return(
+const accountDetails = [
+    {first: "Language", second: "English", third: "Update"},
+    {first: "Date-Formate", second: "DD-MM-YY", third: "Update | Remove"},
+    {first: "Automatic Timezone", second: "", third: "icon"},
+]
+
+const SettingsMainContent=()=>{
+    return (
         <div className="settings-main">
             <h2 className="settings-title">Settings</h2>
             <div className="settings-tabs">
@@ -64,4 +64,4 @@ const Settings =() =>{
     );
 }
 
-export default Settings;
+export default SettingsMainContent;

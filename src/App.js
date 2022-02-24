@@ -3,7 +3,7 @@ import React from "react";
 import LandingPage from "./pages/LandingPage";
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-import Settings from './components/Settings';
+import Settings from './pages/Settings';
 import './App.css';
 
 function App() {
