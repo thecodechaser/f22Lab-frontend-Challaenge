@@ -28,8 +28,6 @@ const MainContent = () => {
    setProfile(returnData.data)
   }
 
-  console.log(profile.length);
-
   useEffect(()=>{
     fetchTeam();
     fetchProfile();
